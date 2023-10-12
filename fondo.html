@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("imagenes/MESAAK0.png");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Aquí puedes agregar cualquier otro contenido o elementos -->
+    </div>
+
+    <script>
+        // Variable para almacenar las imágenes de fondo
+        var images = [
+        "url('imagenes/MESAAK4.png')",
+            
+            
+            "url('imagenes/MESAAK1.png')",
+            "url('imagenes/MESAAK2.png')",
+            "url('imagenes/MESAAK3.png')",
+        ];
+
+        var currentImage = 0;
+
+        // Función para cambiar la imagen de fondo al presionar la flecha derecha
+        function changeBackground(event) {
+            if (event.keyCode === 39) {  // Código de la flecha derecha
+                currentImage = (currentImage + 1) % images.length;
+                document.body.style.backgroundImage = images[currentImage];
+            }
+        }
+
+        // Agregar el evento al presionar una tecla
+        document.addEventListener("keydown", changeBackground);
+    </script>
+</body>
+</html>
